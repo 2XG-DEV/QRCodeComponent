@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+/* CSS Reset and Global Rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Outfit", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--slate-300);
+}
+
+/* Remove animations and transitions for reduced-motion users */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Design System Variables */
+:root {
+  /* Colors */
+  --white: hsl(0, 0%, 100%);
+  --slate-300: hsl(212, 45%, 89%);
+  --slate-500: hsl(216, 15%, 48%);
+  --slate-900: hsl(218, 44%, 22%);
+
+  /* Typography */
+  --font-family: "Outfit", sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* Layout */
+  --container-max-width: 320px;
+  --border-radius: 20px;
+  --padding: 16px;
+  --shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Container */
+.container {
+  max-width: var(--container-max-width);
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+/* QR Code Holder */
+.qr-holder {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.text-holder {
+  padding: 0 16px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Text Styles */
+.heading {
+  color: var(--slate-900);
+  font-size: 22px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.description {
+  color: var(--slate-500);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* Utility Classes */
+.bg-slate-300 {
+  background-color: var(--slate-300);
+}
+
+.text-slate-900 {
+  color: var(--slate-900);
+}
+
+.text-slate-500 {
+  color: var(--slate-500);
+}
